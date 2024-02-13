@@ -1,5 +1,3 @@
-// Personal Portfoli Website From Easy Toturials
-
 // -------------------------About Section Start-------------------------
 // Cashing The Elements
 let tabLink = document.querySelectorAll(".tab-links");
@@ -55,14 +53,3 @@ scrollBtn.addEventListener("click", () => {
   });
 });
 // -------------------------Scroll To Top End-------------------------
-const scriptURL =
-  "https://script.google.com/macros/s/AKfycbz1Arh1H78jWd8jVRWoRhLlCFabYmuBOb0YsC2DbiVbrL4AFOzoiVR5whNulXhTm7U8/exec"
-const form = document.forms["submit-to-google-sheet"]
-const msg = document.getElementById("msg")
-
-form.addEventListener("Submit", (e) => {
-  e.preventDefault(); // Prevent default form submission behavior
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => {
-      msg.innerHTML = "Message sent successfully!"
-      setTimeout(function () {msg.innerHTML = ""}, 5000)form.reset()}).catch((error) => console.error("Error!", error.message))})
